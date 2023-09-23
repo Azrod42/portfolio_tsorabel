@@ -4,10 +4,7 @@ volumes:
   data_portfolio:
 # -=-=-=-=-=-=-=-=-=-=NETWORKS=-=-=-=-=-=-=-=-=-=-
 networks:
-  backend_portfolio:
-    ipam:
-      config:
-        - subnet: 172.27.0.0/16
+  backend_portfolio: {}
 services:
   # -=-=-=-=-=-=-=-=-=-=FRONTEND=-=-=-=-=-=-=-=-=-=-
   front_portfolio:
@@ -18,7 +15,7 @@ services:
       dockerfile: ./front.dockerfile
     container_name: frontend_portfolio
     ports:
-      - "4668:4668"
+      - "4700:4700"
     restart: unless-stopped
     networks:
       - backend_portfolio
