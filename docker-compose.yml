@@ -1,0 +1,41 @@
+version: '3.8'
+# -=-=-=-=-=-=-=-=-=-=VOLUMES=-=-=-=-=-=-=-=-=-=-
+volumes:
+  data_portfolio:
+# -=-=-=-=-=-=-=-=-=-=NETWORKS=-=-=-=-=-=-=-=-=-=-
+networks:
+  backend_portfolio:
+    ipam:
+      config:
+        - subnet: 172.27.0.0/16
+services:
+  # -=-=-=-=-=-=-=-=-=-=FRONTEND=-=-=-=-=-=-=-=-=-=-
+  front_portfolio:
+    volumes:
+      - ./portfolio:/app
+    build:
+      context: ./portfolio
+      dockerfile: ./front.dockerfile
+    container_name: frontend_portfolio
+    ports:
+      - "4668:4668"
+    restart: unless-stopped
+    networks:
+      - backend_portfolio
+    depends_on:
+      - back_portfolio
+  # -=-=-=-=-=-=-=-=-=-=BACKEND=-=-=-=-=-=-=-=-=-=-
+  back_portfolio:
+    volumes:
+      - ./backend:/app
+    build:
+      context: ./backend
+      dockerfile: ./back.dockerfile
+    container_name: backend_portfolio
+    ports:
+      - "4667:4667"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+    networks:
+      - backend_portfolio

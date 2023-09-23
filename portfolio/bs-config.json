@@ -1,0 +1,12 @@
+{
+  "port": "4668",
+  "ui": {
+    "port": "4668"
+  },
+  "files": [
+    "./dist/**/*"
+  ],
+  "server": {
+    "baseDir": "./dist/portfolio"
+  }
+}
