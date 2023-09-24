@@ -4,7 +4,9 @@ volumes:
   data_portfolio:
 # -=-=-=-=-=-=-=-=-=-=NETWORKS=-=-=-=-=-=-=-=-=-=-
 networks:
-  backend_portfolio: {}
+  my-proxy-net:
+    external:
+      name: nginx_network
 services:
   # -=-=-=-=-=-=-=-=-=-=FRONTEND=-=-=-=-=-=-=-=-=-=-
   front_portfolio:
@@ -18,7 +20,7 @@ services:
       - "4700:4700"
     restart: unless-stopped
     networks:
-      - backend_portfolio
+      - my-proxy-net
     depends_on:
       - back_portfolio
   # -=-=-=-=-=-=-=-=-=-=BACKEND=-=-=-=-=-=-=-=-=-=-
@@ -35,4 +37,4 @@ services:
       - ./backend/.env
     restart: unless-stopped
     networks:
-      - backend_portfolio
+      - my-proxy-net
