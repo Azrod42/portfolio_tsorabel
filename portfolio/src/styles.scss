@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;700&display=swap');
+
+html {
+  background-color: var(--main-background);
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin:0;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+p, h1, h2{
+  margin:0;
+  color: white;
+  font-family: "Barlow", sans-serif;
+}
+
+:root{
+  --main-background: #121215;
+  --ligher-background: #32323D;
+}

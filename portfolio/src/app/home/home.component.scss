@@ -1,0 +1,84 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  height: 100%;
+  width: 100%;
+
+
+  overflow: hidden;
+  z-index: 1;
+  .title-container {
+    width: 80%;
+    margin: 0 auto;
+    h1 {
+      position: relative;
+      z-index: 1;
+      font-size: max(11vw, 30px);
+      font-weight: 700;
+    }
+    h2{
+      position: relative;
+      z-index: 1;
+      font-size: max(4vw, 20px);
+      font-weight: 400;
+    }
+    p{
+      position: relative;
+      z-index: 3;
+      font-size: max(2vw, 12px);
+      font-weight: 200;
+    }
+
+  }
+  .link-container{
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin: 0 auto;
+    font-size: max(1vw, 20px);
+    cursor: pointer;
+  }
+  .rss-container{
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    .icons {
+        filter: invert(1) sepia(0);
+      cursor: pointer;
+    }
+  }
+  .img{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100vh;
+    width: 100vh;
+    object-fit: contain;
+    z-index: 1;
+    overflow: hidden;
+    // filter: blur(1px);
+  }
+
+  @media (max-width: 650px){
+    .img{
+      left: -100px;
+    }
+    .title-container {
+    h1 {
+      position: relative;
+      z-index: 2;
+    }
+    }
+  }
+}
+
