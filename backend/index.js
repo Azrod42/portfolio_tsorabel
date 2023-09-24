@@ -11,7 +11,7 @@ const port = process.env.PORT
 const url = process.env.URL_FRONT;
 
 app.use(cors({
-  origin: (url + ':' + process.env.PORT_FRONT),
+  origin: "*",
   allowedHeaders: ['Content-Type', 'Authorization', 'application/json'],
   // credentials: true
 }));
@@ -27,5 +27,5 @@ app.listen(port, () => {
 
 const userRoutes = require('./routes/user');
 
-app.use('/user', userRoutes);
+app.use('/api/user', userRoutes);
 
