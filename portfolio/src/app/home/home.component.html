@@ -1,19 +1,23 @@
-<div class="container">
+<div class="container anim-in" #container>
   <div class="title-container">
-    <h1>Tom Sorabella</h1>
-    <h2>&nbsp;&nbsp;Student at 42</h2>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Passionate about code, especially webdev !</p>
+    <h1 class="tracking-in-expand">Tom Sorabella</h1>
+    <h2 class="tracking-in-expand">&nbsp;&nbsp;Student at 42</h2>
+    <p class="tracking-in-expand">&nbsp;&nbsp;&nbsp;&nbsp;Passionate about code, especially webdev !</p>
   </div>
   <div class="link-container">
-    <p>About</p>
-    <p>Projects</p>
-    <p>42 Projects</p>
+    <div (click)="onEnter()" class="enter-btn heartbeat ">
+      <p >Visit:&nbsp;</p>
+      <div class="slider">
+        <p class="slide-text">about</p>
+        <p class="slide-text">projects</p>
+        <p class="slide-text">42-projects</p>
+      </div>
+    </div>
   </div>
-  <div class="rss-container">
-    <img class="icons" ngSrc="assets/icons/github.svg" width="32" height="32" (click)="onOpenRss('github')">
-    <img class="icons" ngSrc="assets/icons/linkedin.svg" width="32" height="32" (click)="onOpenRss('linkedin')">
-    <img class="icons" ngSrc="assets/icons/twitter.svg" width="32" height="32" (click)="onOpenRss('twitter')">
+  <div class="rss-container focus-in">
+    <img class="icons" alt="github-icon" ngSrc="assets/icons/github.svg" width="32" height="32" (click)="onOpenRss('github')">
+    <img class="icons" alt="linkedin-icon" ngSrc="assets/icons/linkedin.svg" width="32" height="32" (click)="onOpenRss('linkedin')">
+    <img class="icons" alt="twitter-icon" ngSrc="assets/icons/twitter.svg" width="32" height="32" (click)="onOpenRss('twitter')">
   </div>
-  <img class="img" ngSrc="assets/full-size-me.webp" width="1999 " height="1969" priority>
+  <img class="img" alt="tsorabel-img" ngSrc="assets/full-size-me.webp" width="1999 " height="1969" priority>
 </div>
-<app-background></app-background>

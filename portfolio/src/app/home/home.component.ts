@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+    @ViewChild('container', { static: false }) container!: ElementRef;
+   constructor(private _renderer: Renderer2,
+              private _router: Router){
+  }
 
   onOpenRss(to: String){
     switch (to) {
@@ -23,4 +28,21 @@ export class HomeComponent {
     }
   }
 
+  onEnter() {
+    try {
+      this._renderer.setStyle(this.container.nativeElement, "opacity", "1");
+      const audio = new Audio("../../assets/sound/satellite-sound-effects.mp3");
+      audio.load();
+      audio.volume = 0.2;
+      audio.play();
+      this._renderer.removeClass(this.container.nativeElement, "anim-in");
+      this._renderer.addClass(this.container.nativeElement, "anim-out");
+      setTimeout(() => {
+        this._router.navigate(['dashboard']);
+      },600);
+    } catch (e) {
+      console.log(e);
+      this._router.navigate(['dashboard']);
+    }
+  }
 }
