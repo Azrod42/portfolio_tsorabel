@@ -1,4 +1,81 @@
+$title-desktop: 200px;
+$title-mobile: 80px;
+
 .container {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   position: relative;
   z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  .title-container{
+    position: relative;
+    width: $title-desktop;
+    height: 100%;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .content {
+    width: calc(100% - $title-desktop);
+    height: 100%;
+    // border: 1px solid blue;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  transition-duration: 0.4s;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    font-size: 3rem;
+  }
+}
+.tt-bottom{
+  position: absolute;
+  bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  &:hover{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container{
+    flex-direction: column;
+    .title-container{
+      width: 100%;
+      height: $title-mobile;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, minmax(5px, 1fr));
+    }
+    .content {
+      width: 100%;
+      height: calc(100% - $title-mobile);
+    }
+  }
+  .title {
+    font-size: 1.5rem;
+    &:hover{
+      font-size: 1.7rem;
+    }
+  }
+  .tt-bottom{
+    margin: 0;
+    bottom: 30px;
+    right: -14px;
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    &:hover{
+      font-size: 1.2rem;
+    }
+
+  }
 }

@@ -110,30 +110,39 @@
   flex-direction: column;
   font-weight: 200;
   gap: 1vmin;
+  text-overflow: clip;
   .slide-text {
+    width: 7.3vmin;
     position: relative;
     top: 4.5vmin;
     animation: anim-slider 4s ease-in-out infinite;
+    white-space: nowrap;
   }
 }
 
 @keyframes anim-slider{
   10% {
     transform: translateY(0);
-}
+    width: 7.3vmin;
+  }
   30% {
     transform: translateY(-4.8vmin);
+    width: 10.4vmin;
   }
   40% {
     transform: translateY(-4.8vmin);
+    width: 10.4vmin;
   }
   60% {
     transform: translateY(-9.2vmin);
+    width: 14.4vmin;
   }
   70% {
   transform: translateY(-9.2vmin);
+    width: 14.4vmin;
   }
   90% {
   transform: translateY(0);
+    width: 7.3vmin;
   }
 }

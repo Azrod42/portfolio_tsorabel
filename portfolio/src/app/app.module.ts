@@ -7,13 +7,15 @@ import { HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { BackgoundComponent } from './components/backgound/backgound.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BacklayerComponent } from './components/backlayer/backlayer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BackgoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    BacklayerComponent
   ],
   imports: [
     BrowserModule,

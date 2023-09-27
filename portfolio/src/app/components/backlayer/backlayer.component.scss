@@ -1,0 +1,75 @@
+
+.container {
+    width: 100%;
+    width: 100%;
+    align-items: stretch;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.borderTopLeft {
+    position: absolute;
+    width: 35%;
+    height: 20%;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    top: 20px;
+    left: 20px;
+    animation: an1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.borderTopRight {
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    top: 20px;
+    right: 20px;
+    animation: an2;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+.borderBottomLeft {
+    position: absolute;
+    width: 15%;
+    height: 40%;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    bottom: 20px;
+    left: 20px;
+    animation: an2;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+.borderBottomRight {
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    bottom: 20px;
+    right: 20px;
+    animation: an1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes an1{
+    0%   { width: 15%; height: 40%;}
+    50%  { width: 50%; height: 10%;}
+    100% { width: 15%; height: 40%;}
+}
+
+@keyframes an2{
+    0%   { width: 35%; height: 10%;}
+    50%  { width: 10%; height: 44%;}
+    100% { width: 35%; height: 10%;}
+}
