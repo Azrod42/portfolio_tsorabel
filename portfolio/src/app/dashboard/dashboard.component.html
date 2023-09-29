@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container anim-in">
   <div class="title-container">
     <p class="title" (click)="onSelect(1)">About</p>
     <p class="title" (click)="onSelect(2)">Projects</p>
@@ -6,7 +6,21 @@
     <p class="title" (click)="onSelect(4)">Contact</p>
     <p class="title tt-bottom" (click)="onSelect(5)">Crédits</p>
   </div>
-  <div class="content">
-
+  <div class="content" #contentRef>
+    <div class="flip" *ngIf="selected == 1" style="height: 100%;">
+      <app-about></app-about>
+    </div>
+    <div class="flip" *ngIf="selected == 2" style="height: 100%;">
+      <app-projects></app-projects>
+    </div>
+    <div class="flip" *ngIf="selected == 3" style="height: 100%;">
+      <app-tooling></app-tooling>
+    </div>
+    <div class="flip" *ngIf="selected == 4" style="height: 100%;">
+      <app-contact></app-contact>
+    </div>
+    <div class="flip" *ngIf="selected == 5" style="height: 100%;">
+      <app-credits></app-credits>
+    </div>
   </div>
 </div>

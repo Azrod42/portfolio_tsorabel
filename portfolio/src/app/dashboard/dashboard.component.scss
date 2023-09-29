@@ -6,9 +6,12 @@ $title-mobile: 80px;
   height: calc(100% - 40px);
   position: relative;
   z-index: 2;
+  filter: blur(8px);
+  opacity: 0;
   padding: 20px;
   display: flex;
   flex-direction: row-reverse;
+  overflow: hidden;
   .title-container{
     position: relative;
     width: $title-desktop;
@@ -22,6 +25,7 @@ $title-mobile: 80px;
   .content {
     width: calc(100% - $title-desktop);
     height: 100%;
+    overflow: hidden;
     // border: 1px solid blue;
   }
 }

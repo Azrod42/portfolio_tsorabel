@@ -8,6 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { BackgoundComponent } from './components/backgound/backgound.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BacklayerComponent } from './components/backlayer/backlayer.component';
+import { AboutComponent } from './dashboard/pages/about/about.component';
+import { ToolingComponent } from './dashboard/pages/tooling/tooling.component';
+import { CreditsComponent } from './dashboard/pages/credits/credits.component';
+import { ProjectsComponent } from './dashboard/pages/projects/projects.component';
+import { ContactComponent } from './dashboard/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +20,12 @@ import { BacklayerComponent } from './components/backlayer/backlayer.component';
     HomeComponent,
     BackgoundComponent,
     DashboardComponent,
-    BacklayerComponent
+    BacklayerComponent,
+    AboutComponent,
+    ToolingComponent,
+    CreditsComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

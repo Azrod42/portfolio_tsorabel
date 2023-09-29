@@ -32,11 +32,12 @@ p, h1, h2{
   animation: out 0.5s ease-in-out forwards;
 }
 .anim-in {
-  animation: in 1.5s forwards;
+  animation: in 1.5s ease-in-out forwards;
 }
 
 @keyframes in {
   100% {
+  filter: blur(0px);
   opacity: 1;
 }
 }
@@ -105,3 +106,32 @@ p, h1, h2{
     animation-timing-function: ease-out;
   }
 }
+
+.flip{
+	animation: flip 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes flip{
+  0% {
+    transform: rotate3d(0, 1, 0, -90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
+
+.flip-reverse{
+	animation: flip-rev 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes flip-rev{
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, -90deg);
+    opacity: 0;
+  }
+}
+
