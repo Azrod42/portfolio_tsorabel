@@ -3,6 +3,6 @@ const router = express.Router();
 
 const userCtrl = require('../controllers/users')
 
-router.get('/me', userCtrl.me);
+router.get('/projects/:id', userCtrl.projects);
 
 module.exports = router;

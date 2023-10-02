@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   .stack{
-    overflow: scroll;
+    overflow: auto;
     background-color: #0C0C0C99;
     display: flex;
     justify-content: center;
@@ -21,6 +21,9 @@
     }
     p{
       margin-bottom: 30px;
+      img{
+        margin-right: 6px;
+      }
     }
   }
 }

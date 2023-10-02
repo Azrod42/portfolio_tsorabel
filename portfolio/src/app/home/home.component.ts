@@ -31,10 +31,6 @@ export class HomeComponent {
   onEnter() {
     try {
       this._renderer.setStyle(this.container.nativeElement, "opacity", "1");
-      const audio = new Audio("../../assets/sound/satellite-sound-effects.mp3");
-      audio.load();
-      audio.volume = 0.2;
-      audio.play();
       this._renderer.removeClass(this.container.nativeElement, "anim-in");
       this._renderer.addClass(this.container.nativeElement, "anim-out");
       setTimeout(() => {

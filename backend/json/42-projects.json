@@ -1,0 +1,145 @@
+[
+ {
+    "name": "ft_irc",
+    "desc": "ft_irc is a group project that involves creating an IRC server (from scratch, in C++), as the name suggests. The server follows the RFC 2812 specification and can therefore be used with existing IRC clients.",
+    "stack": [
+      "C++",
+      "Network"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fft_irc.png&w=256&q=75",
+    "id":"0"
+  },
+ {
+    "name": "Inception",
+    "desc": "Docker is used extensively with docker-compose in this project with multiple constraints: hosting a multi-container wordpress, reverse-proxy and SSL certificates.",
+    "stack": [
+      "Docker",
+      "SysAdmin",
+      "Network"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Finception.png&w=256&q=75",
+    "id":"1"
+  },
+ {
+    "name": "cub3D",
+    "desc": "cub3D is a two-person graphics project in which we create a game that resembles an old FPS, such as Wolfenstein 3D. To achieve this, we use C programming language and implement Raycasting, with a very minimalistic graphics library called MinilibX (which renders pixel by pixel).",
+    "stack": [
+      "C",
+      "3D",
+      "Minilibx"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fcub3d.png&w=384&q=75",
+    "id":"2"
+  },
+ {
+    "name": "NetPractice",
+    "desc": "NetPractice is a project consisting of 10 exercises designed to introduce us to networking concepts such as subnet masks, routers, switches, and more.",
+    "stack": [
+      "Network"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fnetpractice.png&w=384&q=75",
+    "id":"3"
+  },
+  {
+    "name": "Piscine C++",
+    "desc": "A C++ pool consisting of 9 modules aimed at deepening the understanding of concepts such as classes and polymorphism, templates, and casts.",
+    "stack": [
+      "C+"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fcpp.png&w=384&q=75",
+    "id":"4"
+  },
+  {
+    "name": "Minishell",
+    "desc": "A major project completed in pairs, aimed at creating a command interpreter that mimics bash. Minishell handles environment variables, launches programs and manages their returns, as well as pipes and redirects. Additionally, it includes several built-in functions such as cd, echo, env, exit, export, pwd, and unset.",
+    "stack": [
+      "C",
+      "Bash"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fminishell.png&w=640&q=75",
+    "id":"5"
+  },
+  {
+    "name": "Philosophers",
+    "desc": "Modeling the Dining Philosophers problem, first by representing each philosopher as a thread and each fork as a mutex, and secondly by representing each philosopher as a forked child process and the forks as semaphores.",
+    "stack": [
+      "C",
+      "Thread"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fphilosopher.png&w=256&q=75",
+    "id":"6"
+  },
+ {
+    "name": "push_swap",
+    "desc": "push_swap is an algorithmic project aimed at sorting a stack with the fewest possible operations using a temporary stack. We are allowed to use two operations that are not normally available on stacks: rotate and reverse rotate.",
+    "stack": [
+      "C",
+      "Algorithm"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fpush_swap.gif&w=256&q=75",
+    "id":"7"
+  },
+  {
+    "name": "Minitalk",
+    "desc": "The task is to enable communication between two programs, a server and a client, using two Unix signals sent with KILL, which means sending binary data through Unix signals. The challenge is to receive the bits in the order they were sent.",
+    "stack": [
+      "C",
+      "Unix",
+      "Signals"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fminitalk.webp&w=640&q=75",
+    "id":"8"
+  },
+ {
+    "name": "So_long",
+    "desc": "so_long is a graphical program where we generate a 2D game. The interactive map is created from a .txt file and developed using a simplistic graphics library that allows for pixel-by-pixel display.",
+    "stack": [
+      "C",
+      "Unix",
+      "Signals"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fso_long.png&w=640&q=75",
+    "id":"9"
+  },
+  {
+    "name": "ft_printf",
+    "desc": "The task is to recreate the printf function from the C standard library. ft_printf works exactly the same way as printf, but `\"`only`\"` with the following flags: %cspdiuxX.",
+    "stack": [
+      "C"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fft_printf.png&w=640&q=75",
+    "id":"10"
+  },
+  {
+    "name": "get_next_line",
+    "desc": "The task is to recreate the getline() function from the C standard library. get_next_line allows, like getline, to return each line of a file successively. It is possible to vary the size of the buffer.",
+    "stack": [
+      "C"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fgnl.png&w=640&q=75",
+    "id":"11"
+  },
+  {
+    "name": "Born2beroot",
+    "desc": "Installing Wordpress on a Debian server following very strict security, encryption and partitioning rules. Create a simple monitoring script using Bash.",
+    "stack": [
+      "Debian",
+      "Security",
+      "Encryption",
+      "Worldpress",
+      "Monitoring",
+      "Bash"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Fborn2beroot.jpeg&w=384&q=75",
+    "id": "12"
+  },
+{
+    "name": "libft",
+    "desc": "The goal of this project is to have us create a library containing many commonly used functions in C, but that we must code from scratch. We will use our own standard library `\"`libft`\"` in future 42 projects.",
+    "stack": [
+      "C"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F42-project%2Flibft.png&w=384&q=75",
+    "id":"13"
+  }
+]

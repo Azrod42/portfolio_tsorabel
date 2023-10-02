@@ -1,1 +1,27 @@
-<p>projects works!</p>
+<div class="container">
+  <div class="selector">
+    <div class="split" (click)="onClick(1)">
+      Projects
+    </div>
+    <div class="split" (click)="onClick(2)">
+      42 Projects
+    </div>
+  </div>
+  <div class="selected">
+    <div class="projects-title">
+      <div *ngFor="let project of projects">
+        <p (click)="onSelect(project.id)">{{project.name}}</p>
+      </div>
+    </div>
+    <div class="project-selected" #selectedRef>
+      <h1 class="text-shadow-pop-tr">{{selectedObj.name}}</h1>
+      <p>{{selectedObj.desc}}</p>
+      <div class="stack">
+        <p *ngFor="let stack of selectedObj.stack">&nbsp;#{{stack}}&nbsp;</p>
+      </div>
+      <div *ngIf="selectedObj.img_url">
+        <img class="img" alt="project-img" ngSrc="{{selectedObj.img_url}}" width="640" height="270" priority>
+      </div>
+    </div>
+  </div>
+</div>

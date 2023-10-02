@@ -1,0 +1,58 @@
+[
+  {
+    "name": "ft_transcendence",
+    "desc": "Web development project for 42. The goal is to create an online multiplayer Pong with features such as:\n\n       -auth (email) and OAuth2 42\n       -Chat (private and channel)\n       -Matchmaking (ranked, un-ranked, custom appearance...)\n       -User profile (player stats, add friend, block user...)\n       -Live information (users connected, friend status ... )\n\nWebsite build in Single Page Application.\n\n",
+    "stack": [
+      "NextJS",
+      "React",
+      "html",
+      "css",
+      "typescript",
+      "NestJS",
+      "PostgreSQL",
+      "Docker",
+      "Nginx"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2Ftranscendence.gif&w=640&q=75",
+    "id":"0"
+  },
+  {
+    "name": "deezy",
+    "desc": "Deezy is a small web project using the Deezer api with the following functionality:\n\n       -OAuth2 Deezer\n       -Trending song display\n       -Search for any sound via the deezer api\n       -Single page for each sound, with the option of listening to a preview\n\nWebsite build with Angular + Express + MangoDB host on OVH VPS.\n\n\n\n",
+    "stack": [
+      "Angular",
+      "Express",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "Docker",
+      "Nginx"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2Fdeezy.gif&w=640&q=75",
+    "id":"1"
+  },
+  {
+    "name": "portfolio_3d",
+    "desc": "Rebuilding my portfolio in 3D using ThreeJs. Built in NextJS (React) TypeScript.",
+    "stack": [
+      "NextJS",
+      "React",
+      "typescript",
+      "CSS",
+      "HTML"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2F3dWebsite.gif&w=640&q=75",
+    "id":"2"
+  },
+  {
+    "name": "first_website",
+    "desc": "First website made in html css and JavaScript with features such as :\n\n       -Flappy bird game\n       -Weather api tools\n       -so_long 42 project\n       -...",
+    "stack": [
+      "HTML",
+      "CSS",
+      "javascript"
+    ],
+    "img_url": "https://portfolio.tsorabel.dev/_next/image?url=%2Fpersonal-website.jpeg&w=640&q=75",
+    "id":"3"
+  }
+]

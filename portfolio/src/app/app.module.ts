@@ -13,6 +13,10 @@ import { ToolingComponent } from './dashboard/pages/tooling/tooling.component';
 import { CreditsComponent } from './dashboard/pages/credits/credits.component';
 import { ProjectsComponent } from './dashboard/pages/projects/projects.component';
 import { ContactComponent } from './dashboard/pages/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { ContactComponent } from './dashboard/pages/contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [
   ],
