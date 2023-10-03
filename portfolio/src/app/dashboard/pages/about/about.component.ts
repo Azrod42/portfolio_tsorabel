@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  constructor(){
+  }
+  openCV(){
+    window.open('../../../../assets/CV _tom_sorabella_EN.pdf','_blank');
+  }
+
   onOpenRss(to: String){
     switch (to) {
       case "twitter":

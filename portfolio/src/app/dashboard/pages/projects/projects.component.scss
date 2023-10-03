@@ -49,6 +49,15 @@
           font-weight: 700;
          }
        }
+       transition-duration: 400ms;
+       &:hover{
+         transform: scale(1.3);
+       }
+       @media screen and (max-width: 600px) {
+          &:hover{
+           transform: scale(1);
+         }
+       }
      }
      .project-selected{
        width: 90%;

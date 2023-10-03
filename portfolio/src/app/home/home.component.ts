@@ -7,9 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-    @ViewChild('container', { static: false }) container!: ElementRef;
+  @ViewChild('container', { static: false }) container!: ElementRef;
+  swipe = new Audio("../../assets/sound/swipe.mp3");
+
+
    constructor(private _renderer: Renderer2,
               private _router: Router){
+    this.swipe.load();
+    this.swipe.volume = 0.8;
   }
 
   onOpenRss(to: String){
@@ -28,7 +33,8 @@ export class HomeComponent {
     }
   }
 
-  onEnter() {
+  async onEnter() {
+    await this.swipe.play();
     try {
       this._renderer.setStyle(this.container.nativeElement, "opacity", "1");
       this._renderer.removeClass(this.container.nativeElement, "anim-in");

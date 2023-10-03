@@ -11,9 +11,9 @@ const port = process.env.PORT
 const url = process.env.URL_FRONT;
 
 const corsOptions = {
-  origin: process.env.URL_FRONT, // Remplacez par l'URL de votre application Angular
+  origin: process.env.URL_FRONT, 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: ['Content-Type', 'Authorization'], // Vous n'avez pas besoin d'inclure 'Access-Control-Allow-Headers' ici
+  allowedHeaders: ['Content-Type', 'Authorization'], 
   preflightContinue: false,
   credentials: true
 };

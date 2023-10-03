@@ -12,10 +12,13 @@ export class ProjectsComponent {
   selected: number = 0;
   selectedObj: any = {};
   @ViewChild('selectedRef', { static: false }) selectedRef!: ElementRef;
+  swipe = new Audio('../../../../assets/sound/swoop.mp3')
 
   constructor(private projectService: ProjectsService,
               private renderer: Renderer2){
     this.onClick(1);
+    this.swipe.load();
+    this.swipe.volume = 1;
   }
 
   onSelect(id: number){
@@ -23,6 +26,7 @@ export class ProjectsComponent {
       this.renderer.removeClass(this.selectedRef.nativeElement, "blur-out")
       this.renderer.removeClass(this.selectedRef.nativeElement, "blur-in")
       this.renderer.addClass(this.selectedRef.nativeElement, "blur-out")
+      this.swipe.play();
       setTimeout(() => {
         this.selected = id;
         this.selectedObj = this.projects[id];
@@ -37,6 +41,7 @@ export class ProjectsComponent {
   async onClick(id: number){
     if (id > 0 && id < 3 && id != this.category){
       this.category = id;
+      this.selected = 0;
       this.projects = await this.projectService.getProjects(id);
       this.selectedObj = this.projects[0];
     }
